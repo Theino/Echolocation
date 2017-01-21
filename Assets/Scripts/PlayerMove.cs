@@ -2,22 +2,27 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityStandardAssets.Characters.FirstPerson;
 
 public class PlayerMove : MonoBehaviour {
 
     private float timeLastPressed;
     private float timeDelayBetweenClicks = 1;
+    private MouseLook mouseLook = new MouseLook();
 
-	// Use this for initialization
-	void Start () {
+	private void Start () {
         timeLastPressed = Time.time;
 	}
 	
-	// Update is called once per frame
-	void Update () {
+	private void Update () {
         CheckForMove();
         
 	}
+
+    private void FixedUpdate()
+    {
+        
+    }
 
     private void CheckForMove()
     {
