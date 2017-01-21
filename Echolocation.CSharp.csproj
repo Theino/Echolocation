@@ -89,8 +89,13 @@
     <Compile Include="Assets\Thermal Vision\Script\FreeCamera.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\Jiggly Bubble Free\readme_Jiggly_Bubble_Free.txt" />
     <None Include="Assets\Standard Assets\Characters\FirstPersonCharacter\FirstPersonCharacterGuidelines.txt" />
     <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
+    <None Include="Assets\Standard Assets\ParticleSystems\ParticleSystemsGuidelines.txt" />
+    <None Include="Assets\Standard Assets\ParticleSystems\Shaders\PriorityParticleAdd.shader" />
+    <None Include="Assets\Standard Assets\ParticleSystems\Shaders\PriorityParticleAddSoft.shader" />
+    <None Include="Assets\Standard Assets\ParticleSystems\Shaders\PriorityParticleAlpha.shader" />
     <None Include="Assets\Thermal Vision\ReadMe.txt" />
     <None Include="Assets\Thermal Vision\Shader\Thermal Vision.shader" />
   </ItemGroup>

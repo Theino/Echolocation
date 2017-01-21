@@ -6,7 +6,7 @@ public class CameraEffect : MonoBehaviour
 {
 	public Material m_Mat;
 	public bool m_Enable = true;
-	[Range(0.1f, 0.8f)] public float m_ThermalHigh = 0.3f;
+	[Range(0.1f, 1f)] public float m_ThermalHigh = 0.3f;
 	[Range(0.1f, 1f)] public float m_BlurAmount = 0.5f;
 	[Range(0.1f, 1f)] public float m_DimensionsX = 0.5f;
 	[Range(0.1f, 1f)] public float m_DimensionsY = 0.5f;
