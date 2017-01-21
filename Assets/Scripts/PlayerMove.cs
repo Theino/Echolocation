@@ -15,6 +15,7 @@ public class PlayerMove : MonoBehaviour
     public float MinimumX = -90F;
     public float MaximumX = 90F;
     public bool lockCursor = true;
+    public GameObject MovementParticles;
 
     private float timeLastPressed;
     private float timeDelayBetweenClicks = 1;
@@ -50,7 +51,15 @@ public class PlayerMove : MonoBehaviour
 
     private void FixedUpdate()
     {
-        transform.parent.position += transform.forward * movementSpeed;
+        if (Input.GetButton("Swim"))
+        {
+            transform.parent.position += transform.forward * movementSpeed;
+            MovementParticles.SetActive(true);
+        }
+        else
+        {
+            MovementParticles.SetActive(false);
+        }
     }
 
     public void SetCursorLock(bool value)
