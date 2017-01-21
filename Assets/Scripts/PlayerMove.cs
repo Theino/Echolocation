@@ -11,6 +11,8 @@ public class PlayerMove : MonoBehaviour {
     public GameObject Camera;
     public GameObject Player;
     public float movementSpeed = 1f;
+    public float MinimumX = -90F;
+    public float MaximumX = 90F;
 
     private float timeLastPressed;
     private float timeDelayBetweenClicks = 1;
@@ -30,6 +32,8 @@ public class PlayerMove : MonoBehaviour {
         cameraRot *= Quaternion.Euler(-xRot, 0f, 0f);
         playerRot *= Quaternion.Euler(0f, yRot, 0f);
 
+        cameraRot = ClampRotationAroundXAxis(cameraRot);
+
         Camera.transform.localRotation = cameraRot;
         Player.transform.localRotation = playerRot;
     }
@@ -39,60 +43,19 @@ public class PlayerMove : MonoBehaviour {
         transform.position += transform.forward * movementSpeed;
     }
 
-    private void CheckForMove()
+    Quaternion ClampRotationAroundXAxis(Quaternion q)
     {
-        float horizontalInput = Input.GetAxis("Horizontal");
-        float verticalInput = Input.GetAxis("Vertical");
-        if (horizontalInput > 0)
-        {
-            MoveRight();
-        }
-        if (horizontalInput < 0)
-        {
-            MoveLeft();
-        }
-        if (verticalInput > 0)
-        {
-            MoveForward();
-        }
-        if (verticalInput < 0)
-        {
-            MoveBackward();
-        }
-    }
+        q.x /= q.w;
+        q.y /= q.w;
+        q.z /= q.w;
+        q.w = 1.0f;
 
-    private void MoveBackward()
-    {
-        if(CheckTime())
-            Debug.Log("Back");
-    }
+        float angleX = 2.0f * Mathf.Rad2Deg * Mathf.Atan(q.x);
 
-    private bool CheckTime()
-    {
-        if (timeLastPressed < Time.time - timeDelayBetweenClicks)
-        {
-            timeLastPressed = Time.time;
-            return true;
-        }
-        else
-        {
-            return false;
-        }
-    }
-    private void MoveForward()
-    {
-        if (CheckTime())
-            Debug.Log("Forward");
-    }
+        angleX = Mathf.Clamp(angleX, MinimumX, MaximumX);
 
-    private void MoveRight()
-    {
-        if (CheckTime())
-            Debug.Log("Right");
-    }
-    private void MoveLeft()
-    {
-        if (CheckTime())
-            Debug.Log("Left");
+        q.x = Mathf.Tan(0.5f * Mathf.Deg2Rad * angleX);
+
+        return q;
     }
 }
