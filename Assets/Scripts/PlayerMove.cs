@@ -52,7 +52,7 @@ public class PlayerMove : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (Input.GetButton("Swim") || OVRInput.Get(OVRInput.Button.DpadRight) || OVRInput.Get(OVRInput.Button.Two))
+        if (Input.GetButton("Swim") || Input.GetAxis("Oculus_GearVR_DpadX") > 0)
         {         
             transform.parent.position += transform.forward * movementSpeed;
             MovementParticles.SetActive(true);
