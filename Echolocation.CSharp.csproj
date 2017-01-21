@@ -85,10 +85,14 @@
     <Compile Include="Assets\Scripts\Background\WorldMap.cs" />
     <Compile Include="Assets\Scripts\CollisionHandler.cs" />
     <Compile Include="Assets\Scripts\PlayerMove.cs" />
+    <Compile Include="Assets\Thermal Vision\Script\CameraEffect.cs" />
+    <Compile Include="Assets\Thermal Vision\Script\FreeCamera.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Standard Assets\Characters\FirstPersonCharacter\FirstPersonCharacterGuidelines.txt" />
     <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
+    <None Include="Assets\Thermal Vision\ReadMe.txt" />
+    <None Include="Assets\Thermal Vision\Shader\Thermal Vision.shader" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2015\UnityVS.CSharp.targets" />
 </Project>
