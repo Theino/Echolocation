@@ -60,7 +60,7 @@ public class PlayerMove : MonoBehaviour
         {
             MovementParticles.SetActive(false);
         }
-        OVRInput.FixedUpdate();
+        //OVRInput.FixedUpdate();
     }
 
     public void SetCursorLock(bool value)
