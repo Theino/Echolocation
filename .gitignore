@@ -1,11 +1,11 @@
-/[Ll]ibrary/*
-/[Tt]emp/
-/[Oo]bj/
-/[Bb]uild/
-/[Bb]uilds/
-/Assets/AssetStoreTools*
-/test*
-/Library/assetDatabase*
+[Ll]ibrary/*
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+Assets/AssetStoreTools*
+test*
+Library/assetDatabase3
 
 *.meta
 
