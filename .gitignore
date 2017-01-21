@@ -45,3 +45,10 @@ $RECYCLE.BIN/
 Network Trash Folder
 Temporary Items
 .apdisk
+*.backup
+Temp/UnityVS_obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
+*.log
+Library/ScriptAssemblies/Assembly-CSharp.dll
+*.mdb
+*.bakert
+Temp/UnityLockfile

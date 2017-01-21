@@ -49,7 +49,7 @@ public class PlayerMove : MonoBehaviour {
 
     private bool CheckTime()
     {
-        if (timeLastPressed > timeDelayBetweenClicks + Time.time)
+        if (timeLastPressed < timeDelayBetweenClicks + Time.time)
         {
             timeLastPressed = Time.time;
             return true;
@@ -61,15 +61,18 @@ public class PlayerMove : MonoBehaviour {
     }
     private void MoveForward()
     {
-        Debug.Log("Forward");
+        if (CheckTime())
+            Debug.Log("Forward");
     }
 
     private void MoveRight()
     {
-        Debug.Log("Right");
+        if (CheckTime())
+            Debug.Log("Right");
     }
     private void MoveLeft()
     {
-        Debug.Log("Left");
+        if (CheckTime())
+            Debug.Log("Left");
     }
 }
