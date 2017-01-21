@@ -6,7 +6,7 @@ using UnityEngine;
 public class PlayerMove : MonoBehaviour {
 
     private float timeLastPressed;
-    private float timeDelayBetweenClicks = 2;
+    private float timeDelayBetweenClicks = 1;
 
 	// Use this for initialization
 	void Start () {
@@ -49,7 +49,7 @@ public class PlayerMove : MonoBehaviour {
 
     private bool CheckTime()
     {
-        if (timeLastPressed < timeDelayBetweenClicks + Time.time)
+        if (timeLastPressed < Time.time - timeDelayBetweenClicks)
         {
             timeLastPressed = Time.time;
             return true;
