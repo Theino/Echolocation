@@ -52,3 +52,4 @@ Library/ScriptAssemblies/Assembly-CSharp.dll
 *.mdb
 *.bakert
 Temp/UnityLockfile
+Temp/*
