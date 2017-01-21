@@ -47,7 +47,6 @@ public class PlayerMove : MonoBehaviour
         Player.transform.localRotation = playerRot;
         Camera.transform.localRotation = cameraRot;
         UpdateCursorLock();
-        OVRInput.Update();
     }
 
     private void FixedUpdate()
