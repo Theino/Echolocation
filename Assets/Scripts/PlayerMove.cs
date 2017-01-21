@@ -51,7 +51,7 @@ public class PlayerMove : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (Input.GetButton("Swim") || OVRInput.Get(OVRInput.Button.DpadRight))
+        if (Input.GetButton("Swim") || OVRInput.Get(OVRInput.Button.DpadRight) || OVRInput.Get(OVRInput.Button.Two))
         {
             transform.parent.position += transform.forward * movementSpeed;
             MovementParticles.SetActive(true);
@@ -60,6 +60,7 @@ public class PlayerMove : MonoBehaviour
         {
             MovementParticles.SetActive(false);
         }
+        OVRInput.FixedUpdate();
     }
 
     public void SetCursorLock(bool value)
