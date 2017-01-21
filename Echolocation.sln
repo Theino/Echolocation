@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Echolocation.CSharp", "Echo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Echolocation.CSharp.Editor.Plugins", "Echolocation.CSharp.Editor.Plugins.csproj", "{FCE48537-8563-03D7-EB30-A101C50A6E4B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Echolocation.CSharp.Editor", "Echolocation.CSharp.Editor.csproj", "{14EA42E1-4826-925C-51E1-9560A3D4F759}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,6 +27,10 @@ Global
 		{FCE48537-8563-03D7-EB30-A101C50A6E4B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FCE48537-8563-03D7-EB30-A101C50A6E4B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FCE48537-8563-03D7-EB30-A101C50A6E4B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{14EA42E1-4826-925C-51E1-9560A3D4F759}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14EA42E1-4826-925C-51E1-9560A3D4F759}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14EA42E1-4826-925C-51E1-9560A3D4F759}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14EA42E1-4826-925C-51E1-9560A3D4F759}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
