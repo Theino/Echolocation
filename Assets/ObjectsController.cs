@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ObjectsController : MonoBehaviour {
 
-    public GameObject GoalObject;
+    public GameObject[] GoalObjects;
     public float WorldSize = 20f;
     public int maxFish = 3;
 
@@ -48,7 +48,7 @@ public class ObjectsController : MonoBehaviour {
     public void createNewFish()
     {
         Debug.Log("Fish created");
-        GameObject newGoalObject = Instantiate(GoalObject, transform);
+        GameObject newGoalObject = Instantiate(GoalObjects[0], transform);
         float newX = Random.Range(-WorldSize / 2f, WorldSize / 2f);
         float newY = Random.Range(-WorldSize / 2f, WorldSize / 2f);
         float newZ = Random.Range(-WorldSize / 2f, WorldSize / 2f);
