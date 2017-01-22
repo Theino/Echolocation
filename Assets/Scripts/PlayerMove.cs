@@ -23,6 +23,7 @@ public class PlayerMove : MonoBehaviour
     private Quaternion playerRot;
 
     private bool cursorIsLocked = true;
+    private bool dPadPressed = false;
 
     private float xRot = 0f;
 
@@ -46,12 +47,18 @@ public class PlayerMove : MonoBehaviour
 
         Player.transform.localRotation = playerRot;
         Camera.transform.localRotation = cameraRot;
+
+
         UpdateCursorLock();
+
+
+        if (OVRInput.Get(OVRInput.Button.One))
+            dPadPressed = !dPadPressed;
     }
 
     private void FixedUpdate()
     {
-        if (Input.GetButton("Swim") || Input.GetAxis("Oculus_GearVR_DpadX") > 0)
+        if (Input.GetButton("Swim") || OVRInput.Get(OVRInput.Button.Two) || dPadPressed)
         {         
             transform.parent.position += transform.forward * movementSpeed;
             MovementParticles.SetActive(true);
