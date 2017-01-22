@@ -1,0 +1,20 @@
+# Blender MTL File: 'Devil_Fish.blend'
+# Material Count: 2
+
+newmtl Devil_Fish
+Ns 96.078431
+Ka 0.000000 0.000000 0.000000
+Kd 0.373761 0.373761 0.373761
+Ks 0.500000 0.500000 0.500000
+Ni 1.000000
+d 1.000000
+illum 2
+
+newmtl Devil_Fish_Eyes
+Ns 96.078431
+Ka 0.000000 0.000000 0.000000
+Kd 0.005160 0.209065 0.640000
+Ks 0.500000 0.500000 0.500000
+Ni 1.000000
+d 1.000000
+illum 2
