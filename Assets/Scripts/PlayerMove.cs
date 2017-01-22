@@ -58,7 +58,10 @@ public class PlayerMove : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (Input.GetButton("Swim") || OVRInput.Get(OVRInput.Button.Two) || dPadPressed)
+        if (OVRInput.Get(OVRInput.Button.Two))
+            transform.parent.position = new Vector3(0f, 0f, 0f);
+
+        if (Input.GetButton("Swim") || dPadPressed)
         {         
             transform.parent.position += transform.forward * movementSpeed;
             MovementParticles.SetActive(true);
