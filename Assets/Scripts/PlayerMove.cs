@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityStandardAssets.CrossPlatformInput;
+using UnityEngine.SceneManagement;
 
 public class PlayerMove : MonoBehaviour
 {
@@ -59,7 +60,10 @@ public class PlayerMove : MonoBehaviour
     private void FixedUpdate()
     {
         if (OVRInput.Get(OVRInput.Button.Two))
+        {
             transform.parent.position = new Vector3(0f, 0f, 0f);
+            SceneManager.LoadScene("MainMenu");
+        }
 
         if (Input.GetButton("Swim") || dPadPressed)
         {         
